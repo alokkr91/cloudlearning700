@@ -1,0 +1,16 @@
+﻿@model LearningAZ007.Models.CourseVM;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Here are the available courses:</p>
+    <ul>
+        @foreach (var course in Model.CourseList)
+        {
+            <li>@course.CourseId - @course.CourseName (Rating: @course.Rating)</li>
+        }
+    </ul>
+</div>
